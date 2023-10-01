@@ -1,0 +1,23 @@
+<div
+          className="relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <select
+            className={`w-[20rem] px-4 py-2 font-bold outline-none rounded-2xl flex justify-between bg-white cursor-pointer  text-darkBlue ${
+              isDropdownOpen && 'rounded-b-none'
+            }`}
+          >
+            {/* <span>Opportunity Browsing</span> */}
+            <img
+              src={down}
+              alt=""
+              className={`${isDropdownOpen && 'rotate-180'}`}
+            />
+          </select>
+          <Dropdown
+            isOpen={isDropdownOpen}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
+        </div>
