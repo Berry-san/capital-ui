@@ -31,14 +31,14 @@ const Topbar = () => {
     setIsDropdownOpen(false)
   }
   return (
-    <div className="grid justify-between grid-cols-10 py-8 gap-x-8 font-poppins">
-      <div className="col-span-3">
+    <div className="grid justify-between grid-cols-10 gap-3 py-8 gap-x-8 font-poppins">
+      <div className="col-span-10 md:col-span-5 lg:col-span-3">
         <p className="text-xl font-semibold text-darkBlue">
           London Internship Program
         </p>
         <p className="pt-2">London</p>
       </div>
-      <div className="flex items-start justify-between col-span-7">
+      <div className="flex items-start justify-between col-span-10 md:col-span-5 lg:col-span-7">
         <div className="relative inline-block">
           <div
             className="cursor-pointer w-[20rem] bg-white outline-none px-4 py-2 border rounded-2xl flex justify-between items-center"
@@ -71,7 +71,7 @@ const Topbar = () => {
           </div>
           {isDropdownOpen && (
             <div
-              className="absolute left-0 mt-2 w-[20rem] bg-white border rounded-md shadow-lg"
+              className="absolute z-50 left-0 mt-2 w-[20rem] bg-white border rounded-md shadow-lg"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -88,7 +88,7 @@ const Topbar = () => {
             </div>
           )}
         </div>
-        <div className="flex items-start">
+        <div className="hidden items-start xl:flex">
           <div className="flex space-x-2 pr-2 border-r-2 border-off-white">
             <div className="p-2 bg-white border rounded-lg border-off-white">
               <img src={tag} alt="" />
@@ -107,7 +107,7 @@ const Topbar = () => {
             </div>
           </div>
           <div className="flex items-center pl-2">
-            <button className="py-2 px-4 text-white bg-darkBlue rounded-tl-xl rounded-bl-xl">
+            <button className="py-2 px-4 text-white bg-darkBlue rounded-tl-xl rounded-bl-xl truncate">
               Move To Video Interview I
             </button>
             <button className="ml-0.5 py-2 px-2 bg-darkBlue rounded-tr-xl rounded-br-xl">
